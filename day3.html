@@ -1,0 +1,32 @@
+<form action="/submit-form" method="POST">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100">
+    
+    <label>Gender:</label>
+    <label><input type="radio" name="gender" value="male"> Male</label>
+    <label><input type="radio" name="gender" value="female"> Female</label>
+    
+    <label for="country">Country:</label>
+    <select id="country" name="country">
+        <option value="usa">USA</option>
+        <option value="canada">Canada</option>
+        <option value="uk">UK</option>
+    </select>
+    
+    <label for="comments">Comments:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+    
+    <label><input type="checkbox" name="subscribe" value="newsletter"> Subscribe to newsletter</label>
+    
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+</form>

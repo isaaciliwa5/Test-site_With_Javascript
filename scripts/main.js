@@ -1,20 +1,21 @@
-const myHeading = document.querySelector("h1");
-myHeading.textContent = "Hello World!";
+const myImage = document.querySelector("img");
+myImage.onclick = function () {
+    const mySrc = myImage.getAttribute("src");
 
-let myVariable = "Bob";
-myVariable = "Isaac";
+    if (mySrc === "images/halloween-1.jpg") {
+        myImage.setAttribute("src", "images/halloween-2.jpg");
+    } else {
+        myImage.setAttribute("src", "images/halloween-1.jpg");
+    }
+};
 
-let iceCream = "chocolate";
-if (iceCream === "chocolate") {
-    alert("Yay I love chocolate ice cream!");
-} else {
-    alert("Awww, but chocolate is my favorite...");
-}
+const myImage = document.querySelector("img");
+myImage.onclick = function () {
+    const mySrc = myImage.getAttribute("src");
 
-function multiply(num1, num2) {
-    let result = num1 * num2;
-    return result;
-}
-
-multiply(5, 5);
-
+    if (mySrc === "images/grandpa.jpg") {
+        myImage.setAttribute("src", "images/santa.jpg");
+    } else {
+        myImage.setAttribute("src", "images/grandpa.jpg");
+    }
+};
