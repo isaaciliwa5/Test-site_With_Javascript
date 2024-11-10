@@ -1,0 +1,28 @@
+.poster-1 {
+    width: 1000px;
+    height: 500px;
+    background-color: brown;
+    position: absolute;
+    z-index: 0;
+}
+
+.poster-2 {
+    width: 500px;
+    height: 250px;
+    background-color: blue;
+    position: relative;
+    z-index: 1;
+}
+
+.form {
+    position: relative;
+    z-index: 2;
+    width: 1000px;
+}
+
+.photo-tag {
+    position: absolute;
+    z-index: 3;
+    color: white;
+    text-align: right;
+}
