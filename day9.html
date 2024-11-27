@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                /* Format my table */
+        /* Apply a border-collapse for cleaner borders */
+table {
+    width: 50%; /* Adjust table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Merge table borders */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Subtle background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style the table header */
+thead {
+    background-color: #332aaa; /* Green header */
+    color: white; /* White text for contrast */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style the table header cells */
+thead th {
+    padding: 12px; /* Add padding */
+    border: 1px solid #ddd; /* Add light border */
+}
+
+/* Style the table rows */
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Add row dividers */
+}
+
+/* Add hover effect for rows */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+/* Style the table cells */
+td {
+    padding: 10px; /* Add spacing inside cells */
+    border: 1px solid #ddd; /* Add borders for clarity */
+    text-align: left; /* Left-align the text */
+}
+
+/* Style alternating rows (zebra striping) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Subtle gray background */
+}
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <h1>Breakdown of The Many Things in This Page:</h1>
+            <h3>Today's Role Model</h3>
+            <p>A look into the private life of the nominated role model for the day reveals the 
+                following desirable attributes:
+            </p>
+            <p id="loyasPrinciples"></p>
+        </article>
+        <table>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Average Temperature [Celsius]</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Washington</td>
+                    <td id="washTemp"></td>
+                </tr>
+
+                <tr>
+                    <td>Nebraska</td>
+                    <td id="nebTemp"></td>
+                </tr>
+
+                <tr>
+                    <td>Texas</td>
+                    <td id="texTemp"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <article>
+            <h2>Newsflash:</h2>
+            <h4>Hot news streaming in shows that:</h4>
+            <p id="hotNews"></p>
+        </article>
+
+        <footer>
+            <h2>Tate's Braggardocio:</h2>
+            <p id="myIntro"></p>
+            <p>I own a number of toys but I'll just mention two:</p>
+            <p id="myStuff"></p>
+        </footer>
+    </main>
+    
+
+    <script>
+        // Creating a table recording temperatures of 3 States in the US
+        // Creating function for Conversion-Nebraska Temperature
+        function toCelcius(f) {
+            return (f-32) / 1.8;
+        }
+
+        // Creating function for Washington Temperature
+        function washingtonTemp(f) {
+            return toCelcius(f) - 4.5;
+        }
+
+        // Creating function for Texas Temperature
+        function texasTemp(f) {
+            return toCelcius(f) + 11;
+        }
+
+        // Temperature Logs into Table
+        document.getElementById("washTemp").innerHTML = washingtonTemp(77);
+        document.getElementById("nebTemp").innerHTML = toCelcius(77);
+        document.getElementById("texTemp").innerHTML = texasTemp(77);
+
+        // Javascript Methods
+        const ourJaduong = {
+            firstName: "Brayo",
+            lastName: "Chyra",
+            age: "Thate fae",
+            idNumber: "invalid",
+            profession: "Loya",
+            principle: "Skin-diving into each day",
+
+            // Method 1.
+            fullName: function() {
+                return this.firstName + " " + this.lastName;
+            },
+
+            // Method 2.
+            professionalPrinciple: function() {
+                return this.profession + " who is always " + this.principle;
+            },
+        };
+
+        document.getElementById("loyasPrinciples").innerHTML = 
+            ourJaduong.fullName() + "<br>" + 
+            ourJaduong.professionalPrinciple();
+
+
+        // Nesting Objects.
+        const tatesProfile = {
+            name: "Nerd-Dog",
+            age: 35,
+            hisCars: {
+                car1: "Ford",
+                car2: "Chrysler",
+                car3: "BMW",
+                car4: "Lambo"
+            }
+        };
+
+        let x = "hisCars";
+        let y = "car4";
+
+        console.log(tatesProfile.hisCars.car4);
+
+        document.getElementById("myIntro").innerHTML = "My name is " + tatesProfile.name + "<br>" + 
+            "Age is just a number but I am " + tatesProfile.age + ".";
+
+        document.getElementById("myStuff").innerHTML = tatesProfile[x][y] + "," + 
+            tatesProfile.hisCars.car2 + "," + tatesProfile["hisCars"]["car1"] + " and " + 
+            tatesProfile.hisCars["car3"];
+
+
+        // Adding A Method to an object and Using Uppercase()
+        const prisoner1 = {
+            name1: "Captain",
+            name2: "Sparrow",
+            profession1: "Pirate",
+            age: 50,
+        }
+
+        // Add a Property
+        prisoner1.citizenship = "Carribean";
+
+        // Add a Method
+        prisoner1.bothNames = function() {
+            return (this.name1 + " " + this.name2).toUpperCase();
+        };
+
+        //Display in innerHTML
+        document.getElementById("hotNews").innerHTML = 
+            "Today after dedicating the Royal Bank of St. Martin," + "<br>" + 
+            "We're glad to finally announce that we finally caught " + "<br>" + 
+            prisoner1.bothNames();
+        
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

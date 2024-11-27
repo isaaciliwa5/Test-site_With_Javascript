@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practising JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1 id="fontChange">Day One With JavaScript</h1>
+
+        <button type="button" onclick="document.getElementById('fontChange').style.color='blue'">
+            Click Me!
+        </button>
+
+        <h2 id="demo">Looking Forward for a good time.</h2>
+        <button type="button" onclick='document.getElementById("demo").innerHTML = 
+        "Definitely Gonna Have a Good Time!"'>Just Click & See</button>
+
+        <h2 id="addText"></h2>
+    </header>
+    <main>
+        <div id="firstClass">
+            <p>In this happenstance, we intend to find out if you enjoy our website thus far
+                <h3>Do you like your Web Experience so far?</h3>
+            </p>
+
+            <button type="button" onclick="document.getElementById('myImage').src='images/thumbsUp.jfif'">
+            I Like!
+            </button>
+
+            <img id="myImage" src="images/askingEmoji.jpg" alt="Emoji Asking"
+             style="width: 100px; object-fit: contain;">
+
+            <button type="button" onclick="document.getElementById('myImage').src='images/thumbsDown.png'">
+            I Don't Like!
+            </button> <br>
+        </div>
+
+        <button type="button" onclick="document.getElementById('firstClass').style.display = 'none'">
+            Click To Hide
+        </button>
+
+        <button type="button" onclick="document.getElementById('firstClass').style.display = 'block'">
+            Click To Unhide
+        </button>
+
+        <div class="cultureChoice" id="democratSentiment">
+            <p>
+                <h2>For Democrats</h2>
+                We love being a <strong>hegemony</strong>  and the center of attention; <br>
+                Thats why we throw tantrums everywhere while peddling rumours, laughing gases and mushrooms. <br>
+                Our aim? To hypnotize people into limbo.
+            </p>
+
+            <button type="button" onclick="myPolarizingFunction()">Click To Switch To Republicans</button>
+
+        </div>
+
+        <div class="cultureChoice" id="republicanSentiment">
+            <p>
+                <h2>For Republicans</h2>
+                We fancy when everyone else is thriving, at peace and just worried about making the next set of babies; <br>
+                Meddling into peoples business is a tall order for Us. <br>
+                We're just too busy ensuring that systems are working for everybody. <br>
+                We are colorblind!
+            </p>
+        </div>
+        
+        
+    </main>
+
+  <script>
+    document.getElementById('addText').innerHTML = "Today We're testing Everything!";
+
+    function myPolarizingFunction() {
+        document.getElementById("republicanSentiment").innerHTML = 
+        
+    }
+
+  </script>
+
+  <button onclick="window.print()">
+    Display As Single Page
+  </button>
+
+
+<script src="scripts/day6.js"></script>
+</body>
+</html>
