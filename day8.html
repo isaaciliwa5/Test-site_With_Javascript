@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .divOne {
+            background-color: red;
+            color: blue;
+        }
+
+        .divTwo {
+            background-color: orange;
+            color: green;
+        }
+
+        .divThree {
+            background-color: yellow;
+            color: red;
+        }
+
+        /* Format my table */
+        /* Apply a border-collapse for cleaner borders */
+table {
+    width: 80%; /* Adjust table width */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse; /* Merge table borders */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    font-size: 16px;
+    background-color: #f9f9f9; /* Subtle background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Style the table header */
+thead {
+    background-color: #4CAF50; /* Green header */
+    color: white; /* White text for contrast */
+    text-align: left; /* Align text to the left */
+}
+
+/* Style the table header cells */
+thead th {
+    padding: 12px; /* Add padding */
+    border: 1px solid #ddd; /* Add light border */
+}
+
+/* Style the table rows */
+tbody tr {
+    border-bottom: 1px solid #ddd; /* Add row dividers */
+}
+
+/* Add hover effect for rows */
+tbody tr:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+}
+
+/* Style the table cells */
+td {
+    padding: 10px; /* Add spacing inside cells */
+    border: 1px solid #ddd; /* Add borders for clarity */
+    text-align: left; /* Left-align the text */
+}
+
+/* Style alternating rows (zebra striping) */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Subtle gray background */
+}
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Javascript Variables</h1>
+    </header>
+
+    <main>
+        <div class="divOne">
+            <p>Sum</p>
+            <p id="addPrice"></p>
+        </div>
+
+        <div class="divTwo">
+            <p>Dream Car as below:</p>
+            <p id="dreamCar"></p>
+        </div>
+
+        <div class="divThree">
+            <p>The result of adding 125 + 265 + 385 is:</p>
+            <p id="addNumbers"></p>
+        </div>
+
+        <div class="myTable">
+            <header>
+                <h2>My Employee Control Table:</h2>
+            </header>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee Name:</th>
+                        <th>Log-in Time:</th>
+                        <th>Log-out Time:</th>
+                        <th>Hours Worked:</th>
+                        <th>Rate Per Hour ($):</th>
+                        <th>Calculated Pay:</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Marcus deLezi</td>
+                        <td id="marcusArrival"></td>
+                        <td id="marcusDeparture"></td>
+                        <td id="marcusHours"></td>
+                        <td id="directorsPay"></td>
+                        <td id="marcusNet"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Geovanni Wom Ita</td>
+                        <td id="geovanniArrival"></td>
+                        <td id="geovanniDeparture"></td>
+                        <td id="geovanniHours"></td>
+                        <td id="casualsPay" rowspan="2"></td>
+                        <td id="geovanniNet"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Prof Wax-Too Had</td>
+                        <td id="profArrival"></td>
+                        <td id="profDeparture"></td>
+                        <td id="profHours"></td>
+                        <td id="profNet"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    </main>
+    
+
+    <script>
+
+    // 1. Total price of shopping.
+        const priceUnga = 150;
+        const priceMeat = 250;
+        let totalPrice = priceUnga + priceMeat;
+
+        document.getElementById("addPrice").innerHTML = "Your total price is: Ksh. " + totalPrice;
+
+    // 2. Dream car display.
+    let carName = "Volvo";
+    document.getElementById("dreamCar").innerHTML = "My dream car is always " + carName + "!";
+
+    // 3. Addition.
+    let x = 125 + 265 + 385;
+    document.getElementById("addNumbers").innerHTML = "A glorious " + x;
+
+    // 4. Autofeed data into employee table.
+    let marcusLogin = 1050, marcusLogout = 1604, 
+        marcusWorked = marcusLogout - marcusLogin;
+        marcusNet = marcusWorked
+    let geovanniLogin = 0658, geovanniLogout = 1200, 
+        geovanniWorked = geovanniLogout - geovanniLogin;
+    let profLogin = 0659, profLogout = 1701, profWorked = profLogout - profLogin;
+    let directorsPay = 50, casualsPay = 35;
+
+
+    document.getElementById("marcusArrival").innerHTML = marcusLogin;
+    document.getElementById("marcusDeparture").innerHTML = marcusLogout;
+    document.getElementById("marcusHours").innerHTML= marcusWorked;
+    document.getElementById("directorsPay").innerHTML = directorsPay;
+
+    document.getElementById("geovanniArrival").innerHTML = geovanniLogin;
+    document.getElementById("geovanniDeparture").innerHTML = geovanniLogout;
+    document.getElementById("geovanniHours").innerHTML = geovanniWorked;
+    document.getElementById("casualsPay").innerHTML = casualsPay;
+
+    document.getElementById("profArrival").innerHTML = profLogin;
+    document.getElementById("profDeparture").innerHTML = profLogout;
+    document.getElementById("profHours").innerHTML = profWorked;
+
+    let myScore = 50;
+    let markPresent = "Attended!"
+    let markAbsent = "Absent!"
+
+    function markAttendance() {
+        if (myScore > 0) {
+            return markPresent;
+        } else {
+            return markAbsent;
+        }
+    }
+
+    document.getElementById("marcusArrival").innerHTML = markAttendance(myScore = null);
+
+    // Function to convert Fahrenheit to Celcius
+
+    function toCelcius(fr) {
+        return (fr-32) / 1.8;
+    }
+
+    document.getElementById("geovanniArrival").innerHTML = toCelcius(77);
+
+    
+
+
+
+
+
+
+       
+
+
+
+    </script>
+</body>
+</html>
