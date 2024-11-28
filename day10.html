@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h3>Today's Extravagant Shopping will comprise of:</h3>
+        <p id="spiceList"></p>
+    </main>
+    
+
+    <script>
+        // Using Object.entries to create loops
+        const spices = {Oregano: 57, Capsicum: 122, Muragwo: 57, Mkombero: 85};
+
+        let text = "";
+        for (let[spice, price] of Object.entries(spices)) {
+            text += spice + ": " + price + "<br>";
+        };
+
+        document.getElementById("spiceList").innerHTML = text;
+    </script>
+</body>
+</html>

@@ -62,6 +62,9 @@ tbody tr:nth-child(even) {
                 following desirable attributes:
             </p>
             <p id="loyasPrinciples"></p>
+            <p>Also halla at your dawg below, I am;</p>
+            <p id="mzaeWetu"></p>
+            <p id="mzaeWetu1"></p>
         </article>
         <table>
             <thead>
@@ -197,6 +200,26 @@ tbody tr:nth-child(even) {
             "Today after dedicating the Royal Bank of St. Martin," + "<br>" + 
             "We're glad to finally announce that we finally caught " + "<br>" + 
             prisoner1.bothNames();
+
+
+        // Displaying Properties in a Loop
+        const mzaeWaMtaa = {
+            jina: "Kamau",
+            umri: 36,
+            mtaa: "Bangu",
+        };
+
+        let text = " ";
+        for (let p in mzaeWaMtaa) {
+            text += mzaeWaMtaa[p] + ", ";
+        };
+
+        document.getElementById("mzaeWetu").innerHTML = text;
+
+        // Create an Array with (,).
+        const myList = Object.values(mzaeWaMtaa);
+
+        document.getElementById("mzaeWetu1").innerHTML = "Or you can get me at " +  myList;
         
 
         
