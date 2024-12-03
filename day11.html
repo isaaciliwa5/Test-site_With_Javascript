@@ -7,10 +7,20 @@
 </head>
 <body>
     <header>
-        <h3>Today's Temperatures:</h3>
-        <p>Our Thursday's Average temperatures are reported to be <br> <strong>82F</strong></p>
-        <button onclick="toCelsius()">Convert to Celsius</button>
-        <p id="convertedCelsius"></p>
+        <h2>Fahrenheit to Celsius Converter</h2>
+        <label for="fahrenheit">Enter temperature in Fahrenheit:</label>
+        <input type="number" id="fahrenheit" placeholder="Fahrenheit">
+        <button onclick="convertTemperature()">Convert</button>
+
+        <div id="convertedCelsius" style="margin-top: 20px; font-weight: bold;"></div>
+
+        <!-- Feet To Meters -->
+        <h2>Feet to Meters Converter</h2>
+        <label for="feet">Enter distance in Feet:</label>
+        <input type="number" id="feet" placeholder="Feet">
+        <button onclick="convertDistance()">Convert</button>
+
+        <div id="convertedMeters" style="margin-top: 20px; font-weight: bold;"></div>
     </header>
     <main>
         <h3>Today's Extravagant Shopping will comprise of:</h3>
@@ -19,6 +29,7 @@
         <p id="employeeInfo"></p>
         <h4>Our director attributes</h4>
         <p id="directorsAttr"></p>
+        <p id="azizAge"></p>
     </main>
     
 

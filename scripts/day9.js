@@ -45,8 +45,48 @@ document.getElementById("directorsAttr").innerHTML = "Our esteemed Company Direc
     // Create a function to convert Temperature in Fahrenheit to celcius
     function toCelsius(F) {
         return (F - 32) / 1.8;
-        document.getElementById("convertedCelsius").innerHTML = toCelsius(82);
+    }
+
+    function convertTemperature() {
+        // Get the value from the input field
+        const fahrenheit = document.getElementById("fahrenheit").value;
+
+        // Convert to Celsius
+        const celsius = toCelsius(fahrenheit);
+
+        // Display the result in the convertedCelsius div
+        document.getElementById("convertedCelsius").innerHTML = 
+            `${fahrenheit}°F is equal to ${celsius.toFixed(2)}°C`;
     };
 
-    // Display in paragraph
+
+     // Create a function to convert Distance in Feet to Meters
+     function toMeters(F) {
+        return (F * 0.3048);
+    }
+
+    function convertDistance() {
+        // Get the value from the input field
+        const feet = document.getElementById("feet").value;
+
+        // Convert to Meters
+        const meters = toMeters(feet);
+
+        // Display the result in the convertedMeters div
+        document.getElementById("convertedMeters").innerHTML = 
+            `${feet}ft is equal to ${meters.toFixed(2)}m`;
+    };
+
+    // Calculate age function
+    var user = {
+        name1: "Aziza Ali",
+        yearOfBirth: 1988,
+        calculateAge: function() {
+            var currentYear = new Date().getFullYear(); // Get the current year
+            return currentYear - this.yearOfBirth; // Calculate age
+        }
+    };
+    
+    // Display the age in the innerHTML of the element with ID "azizAge"
+    document.getElementById("azizAge").innerHTML = user.calculateAge();
     
