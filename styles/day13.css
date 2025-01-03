@@ -1,0 +1,77 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Use a clean, professional font */
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text for readability */
+    line-height: 1.6; /* Improve readability */
+    padding: 20px; /* Add some padding around the body */
+}
+
+h2 {
+    text-align: center; /* Center the main heading */
+    color: #0056b3; /* Corporate blue color */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+label {
+    display: block; /* Make labels block elements */
+    margin: 10px 0 5px; /* Space around labels */
+    font-weight: bold; /* Bold labels for emphasis */
+}
+
+input[type="number"],
+select {
+    width: 100%; /* Full width for inputs and selects */
+    padding: 10px; /* Padding for comfort */
+    margin-bottom: 20px; /* Space below inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for inputs */
+}
+
+input[type="number"]:focus,
+select:focus {
+    border-color: #0056b3; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    background-color: #0056b3; /* Corporate blue button */
+    color: white; /* White text on button */
+    border: none; /* No border */
+    padding: 10px 15px; /* Padding for button */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+button:hover {
+    background-color: #004494; /* Darker blue on hover */
+}
+
+#calculatedNet {
+    margin-top: 30px; /* Space above the results section */
+    padding: 20px; /* Padding for the results section */
+    background-color: white; /* White background for contrast */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+h3 {
+    color: #0056b3; /* Corporate blue for subheadings */
+    margin-bottom: 10px; /* Space below subheading */
+}
+
+p {
+    font-size: 18px; /* Larger font size for results */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Dark text for readability */
+}

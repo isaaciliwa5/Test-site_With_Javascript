@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Income Converter</title>
+    <link rel="stylesheet" href="styles/day13.css">
+</head>
+<body>
+    <h2>Net Income Calculator</h2>
+    <label for="gross">Enter Gross Income:</label>
+    <input type="number" id="gross" placeholder="Ksh">
+
+    <label for="jobType">Select Job Type:</label>
+    <select name="jobType" id="jobType">
+        <option value="government">Civil Servant</option>
+        <option value="private">Private Employee</option>
+        <option value="military">Military</option>
+    </select>
+
+    <button onclick="calculatedNet()">Click To Compute</button>
+
+    <div id="calculatedNet">
+        <h3>Calculated Net</h3>
+        <p id="yourNet"></p>
+    </div>
+    
+
+    
+    <script src="scripts/day13.js"></script>
+</body>
+</html>
